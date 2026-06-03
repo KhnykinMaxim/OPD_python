@@ -9,7 +9,7 @@ session.verify = False
 requests.get = session.get
 requests.post = session.post
 
-TOKEN = "8693716381:AAG8ycfIVfCOCV3nDn8Dras1jhTN0_9fyLo"
+TOKEN = "token"
 URL = f"https://api.telegram.org/bot{TOKEN}/"
 
 offset = -1
