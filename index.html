@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Капча</title>
+</head>
+<body>
+
+<h2>Проверка: вы не робот</h2>
+
+{% if passed %}
+    <h2>✅ Верно! Вы не робот</h2>
+
+    <form action="/reset">
+        <button type="submit">Пройти заново</button>
+    </form>
+
+{% else %}
+    <form method="post">
+        <p>Сколько будет: <b>{{ num1 }} + {{ num2 }}</b> ?</p>
+        <input type="text" name="answer" required>
+        <button type="submit">Проверить</button>
+    </form>
+
+    <h3>{{ result }}</h3>
+{% endif %}
+
+</body>
+</html>
+
+
